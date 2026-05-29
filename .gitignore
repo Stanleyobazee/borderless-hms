@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# Docker
+docker-compose.override.yml
+
+# Node
+node_modules/
+frontend/dist/

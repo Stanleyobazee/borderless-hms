@@ -17,13 +17,13 @@ This guide documents the steps to run the Borderless Hospital Management System 
 Create a `.env` file in the project root with the following content:
 
 ```env
-POSTGRES_SERVER=postgres
+POSTGRES_SERVER=db
 POSTGRES_PORT=5432
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=H0sp1talDev2024!
 POSTGRES_DB=hospital_db
 POSTGRES_SSL_MODE=disable
-SECRET_KEY=local-dev-secret-key-change-in-production
+SECRET_KEY=<generate with: openssl rand -hex 32>
 ENVIRONMENT=development
 DEBUG=true
 BACKEND_CORS_ORIGINS=["http://localhost:3000","http://localhost:80","http://localhost:8080"]
@@ -135,7 +135,7 @@ Open http://localhost:5050
 
 | Field | Value |
 |-------|-------|
-| Host | postgres |
+| Host | db |
 | Port | 5432 |
 | Database | hospital_db |
 | Username | postgres |
