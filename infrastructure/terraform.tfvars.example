@@ -1,0 +1,22 @@
+aws_region     = "eu-north-1"
+aws_account_id = "600627355607"
+project_name   = "borderless-hms"
+environment    = "production"
+
+# Generate with: openssl rand -hex 32
+postgres_password = "YourStrongPassword@2024!"
+jwt_secret_key    = "your-64-char-hex-string-here"
+
+# Set to true for production, false to save ~$50/month
+rds_multi_az = false
+
+# Use db.t3.micro to save cost for dev
+rds_instance_class = "db.t3.medium"
+
+backend_min_tasks  = 2
+backend_max_tasks  = 20
+frontend_min_tasks = 2
+frontend_max_tasks = 10
+
+# S3 bucket name for Terraform state (must be globally unique)
+state_bucket_name = "borderless-hms-terraform-state-600627355607"

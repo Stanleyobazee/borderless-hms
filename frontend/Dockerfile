@@ -33,10 +33,10 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup \
 
 USER appuser
 
-EXPOSE 80
+EXPOSE 8080
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
-    CMD wget -q --spider http://127.0.0.1/health || exit 1
+    CMD wget -q --spider http://127.0.0.1:8080/health || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,3 +1,9 @@
+# Terraform
+infrastructure/.terraform/
+infrastructure/*.tfstate
+infrastructure/*.tfstate.backup
+infrastructure/terraform.tfvars
+
 # Python
 venv/
 __pycache__/
